@@ -17,6 +17,12 @@
 		82C80C9123815335002C3E71 /* ChartListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C80C9023815335002C3E71 /* ChartListViewController.storyboard */; };
 		82C80C94238153E0002C3E71 /* ChartListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C93238153E0002C3E71 /* ChartListConfigurator.swift */; };
 		82C80C9623815442002C3E71 /* ChartListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C9523815442002C3E71 /* ChartListPresenter.swift */; };
+		82C80C982381756E002C3E71 /* ChartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C972381756E002C3E71 /* ChartConfigurator.swift */; };
+		82C80C9A2381759C002C3E71 /* ChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C992381759C002C3E71 /* ChartPresenter.swift */; };
+		82C80C9C238175BF002C3E71 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C9B238175BF002C3E71 /* ChartViewController.swift */; };
+		82C80C9E238175C9002C3E71 /* ChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C80C9D238175C9002C3E71 /* ChartViewController.storyboard */; };
+		82C80CA023817860002C3E71 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80C9F23817860002C3E71 /* ChartListView.swift */; };
+		82C80CA22381788C002C3E71 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C80CA12381788C002C3E71 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		82C80C9023815335002C3E71 /* ChartListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartListViewController.storyboard; sourceTree = "<group>"; };
 		82C80C93238153E0002C3E71 /* ChartListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListConfigurator.swift; sourceTree = "<group>"; };
 		82C80C9523815442002C3E71 /* ChartListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListPresenter.swift; sourceTree = "<group>"; };
+		82C80C972381756E002C3E71 /* ChartConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartConfigurator.swift; sourceTree = "<group>"; };
+		82C80C992381759C002C3E71 /* ChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPresenter.swift; sourceTree = "<group>"; };
+		82C80C9B238175BF002C3E71 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		82C80C9D238175C9002C3E71 /* ChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartViewController.storyboard; sourceTree = "<group>"; };
+		82C80C9F23817860002C3E71 /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
+		82C80CA12381788C002C3E71 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 				82C80C9023815335002C3E71 /* ChartListViewController.storyboard */,
 				82C80C93238153E0002C3E71 /* ChartListConfigurator.swift */,
 				82C80C9523815442002C3E71 /* ChartListPresenter.swift */,
+				82C80C9F23817860002C3E71 /* ChartListView.swift */,
 			);
 			path = CharList;
 			sourceTree = "<group>";
@@ -123,6 +136,11 @@
 		82C80C8A23814FFA002C3E71 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				82C80C972381756E002C3E71 /* ChartConfigurator.swift */,
+				82C80C992381759C002C3E71 /* ChartPresenter.swift */,
+				82C80C9B238175BF002C3E71 /* ChartViewController.swift */,
+				82C80C9D238175C9002C3E71 /* ChartViewController.storyboard */,
+				82C80CA12381788C002C3E71 /* ChartView.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -197,6 +215,7 @@
 				82C80C76238147A0002C3E71 /* Assets.xcassets in Resources */,
 				82C80C8523814C56002C3E71 /* chart_data.json in Resources */,
 				82C80C9123815335002C3E71 /* ChartListViewController.storyboard in Resources */,
+				82C80C9E238175C9002C3E71 /* ChartViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,11 +227,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C80C94238153E0002C3E71 /* ChartListConfigurator.swift in Sources */,
+				82C80C9A2381759C002C3E71 /* ChartPresenter.swift in Sources */,
 				82C80C8723814E57002C3E71 /* Chart.swift in Sources */,
 				82C80C8F23815325002C3E71 /* ChartListViewController.swift in Sources */,
 				82C80C6D2381479F002C3E71 /* AppDelegate.swift in Sources */,
+				82C80C9C238175BF002C3E71 /* ChartViewController.swift in Sources */,
+				82C80C982381756E002C3E71 /* ChartConfigurator.swift in Sources */,
+				82C80CA22381788C002C3E71 /* ChartView.swift in Sources */,
 				82C80C8D23815104002C3E71 /* ChartsService.swift in Sources */,
 				82C80C9623815442002C3E71 /* ChartListPresenter.swift in Sources */,
+				82C80CA023817860002C3E71 /* ChartListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
