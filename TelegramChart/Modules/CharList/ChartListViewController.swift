@@ -8,13 +8,6 @@
 
 import UIKit
 
-protocol ChartListView: class {
-    func showDetail(view: UIViewController)
-    func reloadData()
-    func startRefresh()
-    func stopRefresh()
-}
-
 class ChartListViewController: UITableViewController {
 
     var presenter: ChartListPresenter?

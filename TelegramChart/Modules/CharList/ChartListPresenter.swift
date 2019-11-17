@@ -17,7 +17,7 @@ protocol ChartListPresenter: class {
 
 class ChartListPresenterImpl: ChartListPresenter {
 
-    private let view: ChartListView
+    private unowned let view: ChartListView?
     private let service: ChartsService
     private var charts = [Chart]()
     required init(view: ChartListView, service: ChartsService) {
@@ -28,23 +28,23 @@ class ChartListPresenterImpl: ChartListPresenter {
     var chartsCount: Int { get { charts.count } }
 
     func fetchData() {
-        view.startRefresh()
+        view?.startRefresh()
 
         service.getCharts() { [weak self] charts in
             DispatchQueue.main.async {
                 guard let self = self else { return }
-                self.view.stopRefresh()
+                self.view?.stopRefresh()
                 self.charts.removeAll()
                 self.charts.append(contentsOf: charts)
-                self.view.reloadData()
+                self.view?.reloadData()
             }
 
         }
     }
 
     func selected(with index: Int) {
-//        let configurator = ChartConfigurator()
-//        let view = configurator.confugure(with: charts[index])
-//        self.view.showDetail(view)
+        let configurator = ChartConfigurator()
+        let view = configurator.configure(with: charts[index])
+        self.view?.showDetail(view: view)
     }
 }
