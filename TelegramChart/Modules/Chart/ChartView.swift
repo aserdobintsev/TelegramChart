@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+struct SelectionData {
+    let id: String
+    let color: String
+    let title: String
+    var visible: Bool
+}
 
 protocol ChartView: class {
-
+    func configure(with selections: [SelectionData])
 }

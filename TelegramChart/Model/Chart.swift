@@ -8,18 +8,20 @@
 
 import Foundation
 
-struct ChartTest: Decodable {
-    //let columns: [String: [Int]]
-    let types: [String: String] // +
-    let names: [String: String] // +
-    let colors: [String: String] // +
+struct Chart {
+    let xaxis: Line
+    let lines: [Line]
 }
 
-struct Chart {
-    let columns: [String: [Int]]
-    let types: [String: String] // +
-    let names: [String: String] // +
-    let colors: [String: String] // +
+struct Line {
+    let id: String
+    let name: String
+    let color: String
+    let values: [Int]
+}
+
+enum LineType: String {
+    case line, x
 }
 
 extension Chart {
@@ -31,20 +33,31 @@ extension Chart {
         else {
             return nil
         }
-        self.types = types
-        self.names = names
-        self.colors = colors
 
-        var namedColumns = [String: [Int]]()
-
+        var lines = [Line]()
+        var x: Line?
         for column in columns {
             var arr = [Any](column)
-            guard let name = arr.remove(at: 0) as? String,
+            guard let id = arr.remove(at: 0) as? String,
                 let values = arr as? [Int] else {
                     continue
             }
-            namedColumns[name] = values
+            switch types[id] {
+            case LineType.x.rawValue:
+                x = Line(id: id, name: "", color: "", values: values)
+            case LineType.line.rawValue:
+                lines.append(Line(id: id,
+                                  name: names[id] ?? "",
+                                  color: colors[id] ?? "",
+                                  values: values))
+            default:
+                continue
+            }
         }
-        self.columns = namedColumns
+        guard let axis = x else {
+            return nil
+        }
+        self.xaxis = axis
+        self.lines = lines
     }
 }
